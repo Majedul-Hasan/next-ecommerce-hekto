@@ -1,20 +1,22 @@
 
 import React from 'react'
-import Footer from './footet';
+import Footer from './footer';
 import Header from './header';
 
-const Layout = () => {
+const Layout = ({children}) => {
     return (
-        <div className="bg-gray-50">
-          
+      <React.Fragment>
+        <div className="bg-gray-50">          
           <Header />
           <div>
-            {/* <Main /> */}
-            <main>main component</main>
+            {children}
           </div>
           <Footer />
           
         </div>
+      </React.Fragment>
+
+        
       );
 }
 
